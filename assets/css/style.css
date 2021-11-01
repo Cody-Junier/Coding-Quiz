@@ -1,0 +1,41 @@
+body{
+    margin-top: 1rem;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    max-width: 32rem;
+}
+#Start {
+    background:darkblue;
+    color:white;
+    border-radius: 15%;
+    margin: 5px;
+    padding: 5px;
+    cursor:grab;
+}
+.hidden{
+    visibility: hidden;
+}
+/* Question area styling */
+
+/* results area styling */
+
+
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align:end;
+}

@@ -9,23 +9,39 @@
 </head>
 <body>
    <header>
-    <a>View Highscores</a>
-    <!-- put area for timer? -->
+       <div>
+    <a href='#'id="Highscores">View Highscores</a>
+        </div>
+    <div><p id="time">Time:</p></div>
    </header>
     <main>
-        <section class="content-area">
+        <section class="starter">
         <h1>Coding Quiz Challenge</h1>
-        <div class="question">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias omnis minus officia optio asperiores dolorem facere rerum odio nobis. Asperiores officiis eum expedita alias laborum quis voluptatem, facilis maxime mollitia?</p>
-        </div>
-        <div class="options">
-            <btn>Start Quiz</btn>
-        </div>
+         
+        <p class="Rules">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+    
+        <btn id="Start">Start Quiz</btn>
+        </section>
+        <section class="question-area hidden">
+            <h1 id= "question">Question:</h1>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+        </section>
+        <section class="results hidden">
+            <h2>Quiz Complete</h2>
+            <p>Final Score</p>
+            <div>
+                <h3>Enter Your Name</h3>
+                <input type="text">
+                <button class="namebtn">Enter</button>
+            </div>
         </section>
     </main>
 
    <footer>
-       &copy;Cody Junier 2021
+       <h3>&copy;Cody Junier 2021</h3>
    </footer>
 
     <script src="assets/js/script.js"></script>
