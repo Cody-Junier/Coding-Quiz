@@ -4,7 +4,7 @@ The purpose of this site is to allow users to take a timed quiz on the subject o
 <!-- url -->
 https://cody-junier.github.io/Coding-Quiz/
 <!-- screenshot -->
-![screenshot for webpage](assets/images/screenshot.png)
+![screenshot for webpage](assets/images/Screenshot.png)
 <!-- liscense  -->
 MIT License
 
