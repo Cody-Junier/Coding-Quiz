@@ -10,12 +10,12 @@
 <body>
    <header>
        <div>
-    <a href='#'id="Highscores">View Highscores</a>
+    <a href='./highscore.html'id="Highscores">View Highscores</a>
         </div>
-    <div><p id="time">Time:</p></div>
+    <div><p id="time">Time:100</p></div>
    </header>
     <main>
-        <section class="starter">
+        <section class="starter ">
         <h1>Coding Quiz Challenge</h1>
          
         <p class="Rules">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
@@ -37,8 +37,10 @@
             <p id="final-score">Final Score</p>
             <div>
                 <h3>Enter Your Name</h3>
-                <input id="player-name" type="text">
-                <button class="namebtn">Enter</button>
+                <div>
+                <input id="playername" type="text" placeholder="Your Name" />
+                <a href='./highscore.html'><button class="namebtn">Enter</button></a>
+                </div>
             </div>
         </section>
     </main>

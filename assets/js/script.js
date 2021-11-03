@@ -1,12 +1,12 @@
 // Create variables/ objects for manipulation
-let time = 5;
+let time = 4;
 let timeEl = document.getElementById('time')
 let starterEl = document.querySelector('.starter')
 let questionAreaEl = document.querySelector('.question-area')
 let startBtn = document.getElementById('Start')
 let questionEl = document.getElementById('question')
 let resultContainerEl = document.querySelector('.results')
-let saveNameEl=document.querySelector('.nameBtn')
+let saveNameEl=document.querySelector('.namebtn')
 let finalScoreEl = document.getElementById('final-score')
 let rightWrongEl = document.getElementById('right/wrong')
 let tooltipEl = document.getElementById('tooltip')
@@ -20,6 +20,7 @@ let timerIntervalID = null;
 function startQuiz() {
 	timerIntervalID = setInterval(populateTime, 1000);
 	starterEl.classList.add('hidden')
+    questionAreaEl.classList.add('top')
 	questionAreaEl.classList.remove("hidden")
 	populateQuestion()
 }
@@ -73,8 +74,10 @@ function incrementQuestionIndex() {
 	if (currentQuestionIndex > questionsArray.length - 1) {
 		
 		questionAreaEl.classList.add('hidden')
+        resultContainerEl.classList.add('top')
 		resultContainerEl.classList.remove('hidden')
-		finalScoreEl.textContent = `Your final score is ${time + 1}!`
+        timeEl.classList.add('hidden')
+		finalScoreEl.textContent = `Your final score is ${time}!`
 		clearInterval(timerIntervalID)
 		return
 	}
@@ -83,13 +86,21 @@ function incrementQuestionIndex() {
 }
 
 function populateTime() {
+    time--
 	timeEl.textContent = `Time: ${time}`
-	time--
 	if (time < 0) {
 		time = 0;
+        timeEl.classList.add('hidden')
 		questionEl.classList.add('hidden')
+        answer1El.classList.add('hidden')
+        answer2El.classList.add('hidden')
+        answer3El.classList.add('hidden')
+        answer4El.classList.add('hidden')
+        rightWrongEl.classList.add('hidden')
+
+        resultContainerEl.classList.add('top')
 		resultContainerEl.classList.remove('hidden')
-		finalScoreEl.textContent = `Your final score is 0!`
+		finalScoreEl.textContent = `You ran out of time! Your final score is 0!`
 	}
 }
 
@@ -106,6 +117,7 @@ function checkAnswer(answer) {
 		time = time - 10
 		rightWrongEl.classList.remove('hidden')
 		tooltipEl.textContent = tooltipText
+        return time
 	}
 	setTimeout(() => {
 		rightWrongEl.classList.add('hidden')
@@ -114,6 +126,15 @@ function checkAnswer(answer) {
 
 
 // LocalStorage 
-
-
-
+let playerName= document.querySelector("#playername")
+// var playerName= document.getElementById("#playername")
+// console.log(playerName)
+function saveScore () {
+let playerName= document.querySelector("#playername")
+console.log(time);
+localStorage.setItem("score", time)
+localStorage.setItem("name", playerName.value)
+console.log(time)
+console.log(playerName.value)
+}
+saveNameEl.addEventListener("click",saveScore)
