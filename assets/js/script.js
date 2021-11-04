@@ -1,5 +1,5 @@
 // Create variables/ objects for manipulation
-let time = 4;
+let time = 100;
 let timeEl = document.getElementById('time')
 let starterEl = document.querySelector('.starter')
 let questionAreaEl = document.querySelector('.question-area')
